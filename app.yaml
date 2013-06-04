@@ -1,6 +1,7 @@
 application: hangout-apps
 version: 1
 runtime: python27
+threadsafe: true
 api_version: 1
 
 handlers:
@@ -9,7 +10,7 @@ handlers:
 - url: /js
   static_dir: js
 - url: .*
-  script: main.py
+  script: main.app
 
 libraries:
 - name: jinja2
