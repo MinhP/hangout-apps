@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Background Demo">
+    <Require feature="dynamic-height"/>
+    <Require feature="rpc"/>
+  </ModulePrefs>
+  <Content type="html"><![CDATA[
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Background Demo</title>
+        <link rel="stylesheet" type="text/css" href="//hangout-apps.appspot.com/background/background.css">
+        <script src="//plus.google.com/hangouts/_/api/dev/hangout.js"></script>
+      </head>
+      <body>
+        <div id="background">
+          <pre id="debug"></pre>
+        </div>
+        <script src="//hangout-apps.appspot.com/handtracking/background.js"></script>
+      </body>
+    </html>
+  ]]></Content>
+</Module>
