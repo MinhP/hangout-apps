@@ -12,12 +12,17 @@
         <title>Background Demo</title>
         <link rel="stylesheet" type="text/css" href="//hangout-apps.appspot.com/background/background.css">
         <script src="//plus.google.com/hangouts/_/api/dev/hangout.js"></script>
+        <script src="//hangout-apps.appspot.com/background/three.min.js"></script>
       </head>
       <body>
         <div id="background">
+          <div id="room"></div>
+          <canvas id="texture1" width="256" height="256"></canvas>
+          <canvas id="texture2" width="256" height="256"></canvas>
+          <canvas id="texture3" width="256" height="256"></canvas>
           <pre id="debug"></pre>
         </div>
-        <script src="//hangout-apps.appspot.com/handtracking/background.js"></script>
+        <script src="//hangout-apps.appspot.com/background/background.js"></script>
       </body>
     </html>
   ]]></Content>
