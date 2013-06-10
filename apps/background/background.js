@@ -77,12 +77,19 @@
         texture = new THREE.Texture(canvas);
         texture.needsUpdate = true;
         material = new THREE.MeshBasicMaterial({map: texture});
-        
+
         mesh = new THREE.Mesh(new THREE.PlaneGeometry(canvas.width, canvas.height), material);				
         mesh.doubleSided = true;
-        mesh.position.x = -canvas.width;
-        mesh.position.y = -canvas.height;
-        mesh.position.z = 00;
+        mesh.position.x = -canvas.width / 2;
+        mesh.position.y = -canvas.height / 2;
+        mesh.position.z = canvas.width / 2;
+        scene.add(mesh);
+        
+        mesh = new THREE.Mesh(new THREE.PlaneGeometry(canvas.width, canvas.height), material);  			
+        mesh.doubleSided = true;
+        mesh.position.x = -canvas.width / 2;
+        mesh.position.y = -canvas.height / 2;
+        mesh.position.z = -canvas.width / 2;
         scene.add(mesh);
       }
       
