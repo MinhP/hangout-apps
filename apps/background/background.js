@@ -6,7 +6,7 @@
       hapi,
       document = global.document,
       console = global.console,
-      three = global.THREE,
+      THREE = global.THREE,
       renderer,
       scene,
       camera,
@@ -36,7 +36,7 @@
     }
 
     function initialize() {
-      var room, tmp, i, colors = ["yellow", "red", "blue"], canvas, ctx, y, step, texture, material;
+      var room, tmp, i, colors = ["yellow", "red", "blue"], canvas, ctx, y, step, texture, material, mesh;
 
       room = document.getElementById("room")
       
@@ -45,13 +45,13 @@
         return;
       }
       
-      renderer = new three.WebGLRenderer({preserveDrawingBuffer: true});
+      renderer = new THREE.WebGLRenderer({preserveDrawingBuffer: true});
       renderer.setSize(300, 200);
-      renderer.setClearColor(new three.Color(0x000000));
-      renderer.setClearColor(new three.Color(0xCCCCCC));
+      renderer.setClearColor(new THREE.Color(0x000000));
+      renderer.setClearColor(new THREE.Color(0xCCCCCC));
       
-      scene = new three.Scene();
-      camera = new three.PerspectiveCamera(45, 3 / 2, 0.1, 10000);
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(45, 3 / 2, 0.1, 10000);
       camera.position.z = 300;
       scene.add(camera);
       
@@ -74,16 +74,15 @@
           ctx.stroke();
           ctx.closePath();
         }
-        texture = new three.Texture(canvas);
+        texture = new THREE.Texture(canvas);
         texture.needsUpdate = true;
-        material = new three.MeshBasicMaterial({map: texture});
+        material = new THREE.MeshBasicMaterial({map: texture});
         
-        var mesh = new THREE.Mesh(new THREE.PlaneGeometry(canvas.width, canvas.height), material);
-					
-				mesh.doubleSided = true;
-				mesh.position.x = -canvas.width;
-				mesh.position.y = -canvas.height;
-				mesh.position.z = 00;
+        mesh = new THREE.Mesh(new THREE.PlaneGeometry(canvas.width, canvas.height), material);				
+        mesh.doubleSided = true;
+        mesh.position.x = -canvas.width;
+        mesh.position.y = -canvas.height;
+        mesh.position.z = 00;
         scene.add(mesh);
       }
       
