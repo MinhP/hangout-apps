@@ -34,12 +34,10 @@
       }
 
       opacity = Math.max(Math.min(opacity, 1), 0);
+      console.log(elapsed, opacity);
 
       for (o = 0; o < effect.overlays.length; o++) {
         effect.overlays[o].setOpacity(opacity);
-        if (end) {
-          effect.overlays[o].setVisible(false);
-        }
       }
 
       if (!end) {
@@ -80,11 +78,11 @@
             hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/lightning.jpg").createOverlay()
           ],
           "animation": [
-            {"timestamp": 0, "start": 0, "change": 0.02},
-            {"timestamp": 50, "start": 1, "change": -0.01},
-            {"timestamp": 100, "start": 0.5, "change": 0.01},
-            {"timestamp": 150, "start": 1, "change": -0.02},
-            {"timestamp": 200, "start": 0, "end": true}
+            {"timestamp": 0, "start": 0, "change": 0.01},
+            {"timestamp": 100, "start": 1, "change": -0.005},
+            {"timestamp": 200, "start": 0.5, "change": 0.005},
+            {"timestamp": 300, "start": 1, "change": -0.01},
+            {"timestamp": 400, "start": 0, "end": true}
           ],
           "running": false,
           "progress": 0,
@@ -106,9 +104,9 @@
             })
           ],
           "animation": [
-            {"timestamp": 0, "start": 0, "change": 0.005},
-            {"timestamp": 200, "start": 1, "change": 0},
-            {"timestamp": 400, "start": 1, "change": -0.005},
+            {"timestamp": 0, "start": 0, "change": 0.004},
+            {"timestamp": 200, "start": 0.8, "change": 0},
+            {"timestamp": 400, "start": 0.8, "change": -0.004},
             {"timestamp": 600, "start": 0, "end": true}
           ],
           "running": false,
