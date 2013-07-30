@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Overlay Opacity Demo">
+    <Require feature="dynamic-height"/>
+    <Require feature="rpc"/>
+  </ModulePrefs>
+  <Content type="html"><![CDATA[
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Overlay Opacity Demo</title>
+        <link rel="stylesheet" type="text/css" href="//hangout-apps.appspot.com/overlayopacity/opacity.css">
+        <script src="//plus.google.com/hangouts/_/api/dev/hangout.js"></script>
+      </head>
+      <body>
+        <div id="opacity"></div>
+        <pre id="debug"></pre>
+        <script src="//hangout-apps.appspot.com/overlayopacity/opacity.js"></script>
+      </body>
+    </html>
+  ]]></Content>
+</Module>
