@@ -15,7 +15,6 @@
       </head>
       <body>
         <div id="opacity"></div>
-        <pre id="debug"></pre>
         <script src="//hangout-apps.appspot.com/overlayopacity/opacity.js"></script>
       </body>
     </html>

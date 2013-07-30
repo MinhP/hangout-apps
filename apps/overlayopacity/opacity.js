@@ -6,7 +6,6 @@
       hapi,
       doc = global.document,
       console = global.console,
-      debug = doc.getElementById("debug"),
       main = doc.getElementById("opacity"),
       effects;
 
@@ -34,7 +33,6 @@
       }
 
       opacity = Math.max(Math.min(opacity, 1), 0);
-      console.log(elapsed, opacity);
 
       for (o = 0; o < effect.overlays.length; o++) {
         effect.overlays[o].setOpacity(opacity);
