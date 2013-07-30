@@ -37,7 +37,6 @@
 
       for (o = 0; o < effect.overlays.length; o++) {
         effect.overlays[o].setOpacity(opacity);
-        effect.overlays[o].show();
       }
 
       if (!end) {
