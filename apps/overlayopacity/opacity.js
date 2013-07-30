@@ -56,7 +56,7 @@
         effect.running = true;
         for (o = 0; o < effect.overlays.length; o++) {
           effect.overlays[o].setOpacity(effect.animation[0].start);
-          effect.overlays[o].show();
+          effect.overlays[o].setVisible(true);
         }
         effect.timestamp = (new Date()).getTime();
         global.requestAnimationFrame(function () {
