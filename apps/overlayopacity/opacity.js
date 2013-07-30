@@ -37,6 +37,9 @@
 
       for (o = 0; o < effect.overlays.length; o++) {
         effect.overlays[o].setOpacity(opacity);
+        if (end) {
+          effect.overlays[o].setVisible(false);
+        }
       }
 
       if (!end) {
@@ -74,7 +77,7 @@
           "name": "lightning",
           "label": "Lightning",
           "overlays": [
-            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/lightning.png").createOverlay()
+            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/lightning.jpg").createOverlay()
           ],
           "animation": [
             {"timestamp": 0, "start": 0, "change": 0.02},
