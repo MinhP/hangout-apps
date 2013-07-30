@@ -74,14 +74,14 @@
           "name": "lightning",
           "label": "Lightning",
           "overlays": [
-            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/lightning.jpg").createOverlay()
+            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/lightning.png").createOverlay()
           ],
           "animation": [
-            {"timestamp": 0, "start": 0, "change": 0.01},
-            {"timestamp": 100, "start": 1, "change": -0.005},
-            {"timestamp": 200, "start": 0.5, "change": 0.005},
-            {"timestamp": 300, "start": 1, "change": -0.01},
-            {"timestamp": 400, "start": 0, "end": true}
+            {"timestamp": 0, "start": 0, "change": 0.02},
+            {"timestamp": 50, "start": 1, "change": -0.01},
+            {"timestamp": 100, "start": 0.5, "change": 0.01},
+            {"timestamp": 150, "start": 1, "change": -0.02},
+            {"timestamp": 200, "start": 0, "end": true}
           ],
           "running": false,
           "progress": 0,
