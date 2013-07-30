@@ -36,7 +36,7 @@
       ];
 
       for (i = 0; i < effects.length; i++) {
-        button = doc.createElement(button);
+        button = doc.createElement("button");
         button.innerHTML = effects[i].label;
         button.setAttribute("data-index", i);
         main.appendChild(button);
