@@ -90,12 +90,12 @@
           "name": "eyes",
           "label": "Flashing Eyes",
           "overlays": [
-            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/redeye.png").createFacetrackingOverlay({
+            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/redeye.png").createFaceTrackingOverlay({
               "trackingFeature": hapi.av.effects.FaceTrackingFeature.LEFT_EYE,
               "rotateWithFace": true,
               "scaleWithFace": true
             }),
-            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/redeye.png").createFacetrackingOverlay({
+            hapi.av.effects.createImageResource("https://hangout-apps.appspot.com/overlayopacity/redeye.png").createFaceTrackingOverlay({
               "trackingFeature": hapi.av.effects.FaceTrackingFeature.RIGHT_EYE,
               "rotateWithFace": true,
               "scaleWithFace": true
