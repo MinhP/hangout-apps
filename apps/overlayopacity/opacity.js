@@ -21,7 +21,7 @@
       var effect = effects[effect_index], step, elapsed, o, opacity, end;
       elapsed = (new Date()).getTime() - effect.timestamp;
       end = true;
-      for (step = 0; step < effect.animation.length; step++) {
+      for (step = effect.animation.length - 1; step >= 0; step--) {
         if (effect.animation[step].timestamp <= elapsed) {
           end = effect.animation[step].end;
           break;
@@ -43,6 +43,8 @@
         global.requestAnimationFrame(function () {
           animate(effect_index);
         });
+      } else {
+        effect.running = false;
       }
     }
 
