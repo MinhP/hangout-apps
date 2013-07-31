@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Custom Background Demo">
+    <Require feature="dynamic-height"/>
+    <Require feature="rpc"/>
+  </ModulePrefs>
+  <Content type="html"><![CDATA[
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Background Demo</title>
+        <link rel="stylesheet" type="text/css" href="//hangout-apps.appspot.com/custombackground/background.css">
+        <script src="//plus.google.com/hangouts/_/api/dev/hangout.js"></script>
+        <script src="https://www.google.com/jsapi"></script>
+      </head>
+      <body>
+        <div id="background">
+          <button id="pick">Select/upload photo</button><br>
+          <div id="controls">
+            <img src="" id="current"><br>
+            <input id="alpha" type="range" min="0" max="255" value="190"><br>
+            <button id="hide">Hide background</button><br>
+          </div>
+        </div>
+        <script src="//hangout-apps.appspot.com/custombackground/background.js"></script>
+      </body>
+    </html>
+  ]]></Content>
+</Module>
