@@ -6,7 +6,7 @@
       hapi,
       document = global.document,
       console = global.console,
-      mainDiv, picker, video, controls, current, slider,
+      mainDiv, picker, video, controls, current, slider, auto,
       backgroundReplacement,
       backgroundResource;
 
@@ -47,6 +47,7 @@
       backgroundReplacement = hapi.av.effects.getBackgroundReplacement();
       backgroundReplacement.setImageResource(backgroundResource);
       backgroundReplacement.setAlphaThreshold(parseInt(slider.value, 10));
+      backgroundReplacement.setAlphaThresholdAutoUpdating(auto.checked);
       if (!backgroundReplacement.isVisible()) {
         backgroundReplacement.setVisible(true);
       }
@@ -85,6 +86,7 @@
       mainDiv = document.getElementById("background");
       controls = document.getElementById("controls");
       slider = document.getElementById("alpha");
+      auto = document.getElementById("auto");
       controls.style.display = "none";
       current = document.getElementById("current");
       video = hapi.layout.getVideoCanvas();
@@ -117,6 +119,21 @@
       slider.onchange = function () {
         if (!!backgroundReplacement && hapi.av.effects.hasBackgroundReplacementLock()) {
           backgroundReplacement.setAlphaThreshold(parseInt(slider.value, 10));
+        }
+      };
+      
+      auto.onclick = function () {
+        if (auto.checked) {
+          slider.style.visibility = "hidden";
+          if (!!backgroundReplacement && hapi.av.effects.hasBackgroundReplacementLock()) {
+            backgroundReplacement.setAlphaThresholdAutoUpdating(true);
+          }
+        } else {
+          slider.style.visibility = "visible";
+          if (!!backgroundReplacement && hapi.av.effects.hasBackgroundReplacementLock()) {
+            backgroundReplacement.setAlphaThresholdAutoUpdating(false);
+            backgroundReplacement.setAlphaThreshold(parseInt(slider.value, 10));
+          }
         }
       };
     }

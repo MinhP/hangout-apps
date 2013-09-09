@@ -18,12 +18,11 @@
         <div id="background">
           <h1>Custom background</h1>
           <button id="pick">Select/upload photo</button><br>
-          <div id="controls">
+          <div id="controls" style="display: none;">
             <img src="" id="current"><br>
             Adjust Background<br>
-            <input id="alpha" type="range" min="0" max="255" value="190" disabled="disabled"><br>
-            <input id="auto" type="checkbox" checked="checked"> Auto Adjustment<br>
-            <button id="hide">Hide background</button><br>
+            Auto Adjustment <input id="auto" type="checkbox" checked="checked"> <input id="alpha" type="range" min="0" max="255" value="190" style="visibility: hidden;"><br><br>
+            <button id="hide">Remove background</button><br>
           </div>
         </div>
         <script src="//hangout-apps.appspot.com/custombackground/background.js"></script>

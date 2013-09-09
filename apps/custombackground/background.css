@@ -17,6 +17,11 @@ html, body {
 }
 
 #current {
-  width: 300px;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+#slider {
+  vertical-align: text-bottom;
 }
 
