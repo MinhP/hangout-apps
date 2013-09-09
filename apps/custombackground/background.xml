@@ -11,15 +11,18 @@
         <meta charset="UTF-8">
         <title>Background Demo</title>
         <link rel="stylesheet" type="text/css" href="//hangout-apps.appspot.com/custombackground/background.css">
-        <script src="//plus.google.com/hangouts/_/api/dev/hangout.js"></script>
+        <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script src="https://www.google.com/jsapi"></script>
       </head>
       <body>
         <div id="background">
+          <h1>Custom background</h1>
           <button id="pick">Select/upload photo</button><br>
           <div id="controls">
             <img src="" id="current"><br>
-            <input id="alpha" type="range" min="0" max="255" value="190"><br>
+            Adjust Background<br>
+            <input id="alpha" type="range" min="0" max="255" value="190" disabled="disabled"><br>
+            <input id="auto" type="checkbox" checked="checked"> Auto Adjustment<br>
             <button id="hide">Hide background</button><br>
           </div>
         </div>
