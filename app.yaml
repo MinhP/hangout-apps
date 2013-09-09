@@ -5,6 +5,10 @@ threadsafe: true
 api_version: 1
 
 handlers:
+- url: /custombackground/
+  static_files: apps/custombackground/index.html
+  upload: apps/custombackground/index.html
+
 - url: /
   static_dir: apps
 
