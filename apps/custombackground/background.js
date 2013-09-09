@@ -97,6 +97,7 @@
       picker = new global.google.picker.PickerBuilder()
           .addView(new global.google.picker.PhotosView())
           .addView(new global.google.picker.View(global.google.picker.ViewId.PHOTO_UPLOAD))
+          .setDeveloperKey("AIzaSyAFP5Av3xkZWoDZ5_62uM5Jyue8ES4FvGY")
           .setCallback(pickerCallback)
           .build();
 
